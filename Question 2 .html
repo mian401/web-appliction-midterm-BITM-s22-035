@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        const weather = [
+            { day: "Monday", temp: 37 },
+            { day: "Tuesday", temp: 39 },
+            { day: "Wednesday", temp: 40 },
+            { day: "Thursday", temp: 25 },
+            { day: "Friday", temp: 35 },
+            { day: "Saturday", temp: 44 },
+            { day: "Sunday", temp: 31 },
+        ]
+        let MaxIndex = 0;
+
+        weather.forEach((data, index) => {
+
+            if (weather[MaxIndex].temp < data.temp) {
+                MaxIndex = index;
+            }
+
+        })
+
+        console.log(`${weather[MaxIndex].day} Had Highest Temperature of ${weather[MaxIndex].temp} degrees`)
+
+    </script>
+
+</body>
+
+</html>
